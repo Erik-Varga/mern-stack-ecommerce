@@ -17,7 +17,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-9[9vw]'>
+    <div className='w-full flex flex-col justify-between h-screen sm:px-[5vw] md:px-[7vw] lg:px-9[9vw] bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200'>
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />

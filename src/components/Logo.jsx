@@ -1,13 +1,15 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { SiShopee } from "react-icons/si";
 
 const Logo = () => {
   return (
-    <div className='font3 font-bold text-3xl tracking-wide py-2'>
-        <NavLink to="/">
-          Spubba
-        </NavLink>
+    <NavLink to="/">
+      <div className='lexend font-bold text-3xl py-2 flex items-center'>
+        Spubba
+        <SiShopee className='text-3xl ml-1' />
       </div>
+    </NavLink>
   )
 }
 

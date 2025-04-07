@@ -1,8 +1,13 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Logo = () => {
   return (
-    <div className='font3 font-bold text-3xl tracking-wide'>Spubba Store</div>
+    <div className='font3 font-bold text-4xl tracking-wide'>
+        <NavLink to="/">
+          Spubba
+        </NavLink>
+      </div>
   )
 }
 

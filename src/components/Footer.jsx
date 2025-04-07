@@ -32,7 +32,6 @@ const Footer = () => {
                 <SiNodemon size={size} />
                 <IoLogoJavascript  size={size} />
                 <TbBrandTailwind size={size} />
-                
             </span>
         </div>
     )

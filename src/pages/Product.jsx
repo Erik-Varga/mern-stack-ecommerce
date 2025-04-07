@@ -2,7 +2,7 @@ import React from 'react'
 
 const Product = () => {
   return (
-    <div>Product</div>
+    <div className='flex items-center justify-center'>Product</div>
   )
 }
 

@@ -68,10 +68,10 @@ const Navbar = () => {
                     <img src={assets.dropdown_icon} alt="" className='h-4 rotate-180' />
                     <p>Back</p>
                 </div>
-                <NavLink to='/' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-100'>Home</NavLink>
-                <NavLink to='/collection' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-100'>Collection</NavLink>
-                <NavLink to='/about' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-100'>About</NavLink>
-                <NavLink to='/contact' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-100'>Contact</NavLink>
+                <NavLink to='/' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-500'>Home</NavLink>
+                <NavLink to='/collection' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-500'>Collection</NavLink>
+                <NavLink to='/about' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-500'>About</NavLink>
+                <NavLink to='/contact' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-500'>Contact</NavLink>
             </div>
         </div>
     </div>

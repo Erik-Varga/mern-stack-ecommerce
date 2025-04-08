@@ -14,7 +14,7 @@ const CompanyInfo = () => {
                 </div>
                 <div>
                     <p className='text-xl font-medium mb-5'>COMPANY</p>
-                    <ul className="flex flex-col gap-1 text-gray-600 dark:text-gray-400">
+                    <ul className="flex flex-row sm:flex-col justify-around gap-4 sm:gap-1 text-gray-600 dark:text-gray-400">
                         <Link to='/'><li>Home</li></Link>
                         <Link to='/about'><li>About Us</li></Link>
                         <li>Delivery</li>
@@ -23,7 +23,7 @@ const CompanyInfo = () => {
                 </div>
                 <div>
                     <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
-                    <ul className="flex flex-col gap-1 text-gray-600 dark:text-gray-400">
+                    <ul className="flex flex-row sm:flex-col justify-around gap-4 sm:gap-1 text-gray-600 dark:text-gray-400">
                         <li>+1-234-567-8901</li>
                         <li>contact@spubba.com</li>
                     </ul>

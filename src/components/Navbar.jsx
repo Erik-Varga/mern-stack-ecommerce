@@ -12,7 +12,7 @@ const Navbar = () => {
     const {setShowSearch} = useContext(ShopContext);
 
   return (
-    <div className='py-2 px-1 flex items-center justify-between font-medium'>
+    <div className='mx-2 py-2 px-1 flex items-center justify-between font-medium'>
         <Logo />
         <ul className="hidden sm:flex gap-2 md:gap-5 text-sm text-gray-700 dark:text-gray-300">
 
@@ -39,7 +39,9 @@ const Navbar = () => {
 
         <div className="flex items-center gap-5">
             
-            <LuSearch onClick={()=>setShowSearch(true)} className='text-2xl cursor-pointer' />
+            <Link to='/collection'>
+                <LuSearch onClick={()=>setShowSearch(true)} className='text-2xl cursor-pointer' />
+            </Link>
 
             <div className="group relative">
                 <LuUser className='text-2xl cursor-pointer' />

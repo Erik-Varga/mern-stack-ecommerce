@@ -19,7 +19,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='w-full flex flex-col justify-between min-h-screen h-full mx-1 sm:px-[2vw] md:px-[4vw] lg:px-[5vw] bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200'>
+    <div className='flex flex-col justify-between min-h-screen h-full sm:px-[2vw] md:px-[4vw] lg:px-[5vw] bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200'>
         <Navbar />
         <SearchBar />
         <Routes>

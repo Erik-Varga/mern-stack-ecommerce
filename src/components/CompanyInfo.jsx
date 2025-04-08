@@ -22,7 +22,7 @@ const CompanyInfo = () => {
                     <p className='text-xl font-medium mb-5'>COMPANY</p>
                     <ul className="flex flex-row sm:flex-col justify-around gap-4 sm:gap-1 text-gray-600 dark:text-gray-400">
                         <Link to='/'><li>Home</li></Link>
-                        <Link to='/about'><li>About Us</li></Link>
+                        <Link to='/about'><li>About Me</li></Link>
                         <li>Delivery</li>
                         <li>Privacy policy</li>
                     </ul>

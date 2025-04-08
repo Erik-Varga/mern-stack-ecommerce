@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProgressBar = () => {
     const current_hr = 4;
-    const current_min = 4;
+    const current_min = 18;
 
     const total_hr = 13;
     const total_min = 23;
@@ -12,9 +12,10 @@ const ProgressBar = () => {
     const pct_done = (Math.round((current_time / total_time) * 100)).toFixed(0);
 
     return (
-        <div className='flex justify-center items-center gap-2 '>
-            <span>{current_hr}:{current_min} | {total_hr}:{total_min} | {pct_done}%</span>
-            
+        <div>
+            <div className='flex justify-center items-center gap-2 '>
+                <span>{current_hr}:{current_min} | {total_hr}:{total_min} | {pct_done}%</span>          
+            </div>
         </div>
     )
 }

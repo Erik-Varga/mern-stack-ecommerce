@@ -33,7 +33,7 @@ const Navbar = () => {
             </NavLink>
         </ul>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-5">
             
             <LuSearch className='text-2xl cursor-pointer' />
 
@@ -54,7 +54,7 @@ const Navbar = () => {
                 <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[10px]'>10</p>
             </Link>
 
-            <div>
+            <div className='hidden sm:block'>
                 <ToggleDarkMode />
             </div>
 
@@ -62,16 +62,19 @@ const Navbar = () => {
         </div>
 
         {/* sidebar menu */}
-        <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-gray-100 dark:bg-gray-900 transition-all mt-2 ${visible ? 'w-full' : 'w-0'}`}>
+        <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-gray-50 dark:bg-gray-900 transition-all mt-2 ${visible ? 'w-full' : 'w-0'}`}>
             <div className='flex flex-col text-gray-600 dark:text-gray-400'>
                 <div className="flex items-center gap-4 p-3 cursor-pointer" onClick={()=>setVisible(false)}>
                     <img src={assets.dropdown_icon} alt="" className='h-4 rotate-180' />
                     <p>Back</p>
                 </div>
-                <NavLink to='/' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-500'>Home</NavLink>
+                {/* <NavLink to='/' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-500'>Home</NavLink> */}
                 <NavLink to='/collection' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-500'>Collection</NavLink>
                 <NavLink to='/about' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-500'>About</NavLink>
                 <NavLink to='/contact' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-500'>Contact</NavLink>
+                <div className='py-4 pl-6 hover:text-gray-500'>
+                <ToggleDarkMode />
+            </div>
             </div>
         </div>
     </div>

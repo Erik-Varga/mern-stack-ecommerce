@@ -5,9 +5,9 @@ import { SiShopee } from "react-icons/si";
 const Logo = () => {
   return (
     <NavLink to="/">
-      <div className='lexend font-bold text-3xl py-2 flex items-center'>
+      <div className='lexend font-bold py-2 flex items-center'>
         Spubba
-        <SiShopee className='text-3xl ml-1' />
+        <SiShopee className='text-2xl ml-1' />
       </div>
     </NavLink>
   )

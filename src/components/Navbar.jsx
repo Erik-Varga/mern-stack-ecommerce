@@ -1,16 +1,20 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {assets} from '../assets/assets'
 import Logo from './Logo'
 import { Link, NavLink } from 'react-router-dom'
 import { LuSun, LuMoon, LuSearch, LuUser, LuUserX, LuShoppingBag, LuMenu } from "react-icons/lu"
 import ToggleDarkMode from './ToggleDarkMode'
+import { ShopContext } from '../context/ShopContext'
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
+
+    const {setShowSearch} = useContext(ShopContext);
+
   return (
-    <div className='py-2 px-3 flex items-center justify-between font-medium'>
+    <div className='py-2 px-1 flex items-center justify-between font-medium'>
         <Logo />
-        <ul className="hidden sm:flex gap-5 text-sm text-gray-700 dark:text-gray-300">
+        <ul className="hidden sm:flex gap-2 md:gap-5 text-sm text-gray-700 dark:text-gray-300">
 
             <NavLink to='/' className='flex flex-col items-center gap-1 uppercase'>
                 <p>Home</p>
@@ -35,7 +39,7 @@ const Navbar = () => {
 
         <div className="flex items-center gap-5">
             
-            <LuSearch className='text-2xl cursor-pointer' />
+            <LuSearch onClick={()=>setShowSearch(true)} className='text-2xl cursor-pointer' />
 
             <div className="group relative">
                 <LuUser className='text-2xl cursor-pointer' />
@@ -68,7 +72,7 @@ const Navbar = () => {
                     <img src={assets.dropdown_icon} alt="" className='h-4 rotate-180' />
                     <p>Back</p>
                 </div>
-                {/* <NavLink to='/' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-500'>Home</NavLink> */}
+                <NavLink to='/' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-500'>Home</NavLink>
                 <NavLink to='/collection' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-500'>Collection</NavLink>
                 <NavLink to='/about' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-500'>About</NavLink>
                 <NavLink to='/contact' onClick={()=>setVisible(false)} className='py-4 pl-6 hover:text-gray-500'>Contact</NavLink>

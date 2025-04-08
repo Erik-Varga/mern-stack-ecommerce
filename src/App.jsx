@@ -12,13 +12,16 @@ import PlaceOrder from './pages/PlaceOrder'
 import Orders from './pages/Orders'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import CompanyInfo from './components/CompanyInfo'
+import SearchBar from './components/SearchBar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='w-full flex flex-col justify-between min-h-screen h-full sm:px-[3vw] md:px-[5vw] lg:px-[7vw] bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200'>
+    <div className='w-full flex flex-col justify-between min-h-screen h-full mx-1 sm:px-[2vw] md:px-[4vw] lg:px-[5vw] bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200'>
         <Navbar />
+        <SearchBar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/collection' element={<Collection />} />
@@ -30,6 +33,7 @@ function App() {
           <Route path='/place-order' element={<PlaceOrder />} />
           <Route path='/orders' element={<Orders />} />
         </Routes>
+        <CompanyInfo />
       <Footer />
     </div>
   )

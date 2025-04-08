@@ -14,12 +14,15 @@ import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import CompanyInfo from './components/CompanyInfo'
 import SearchBar from './components/SearchBar'
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className='flex flex-col justify-between min-h-screen h-full sm:px-[2vw] md:px-[4vw] lg:px-[5vw] bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200'>
+        <ToastContainer />
         <Navbar />
         <SearchBar />
         <Routes>

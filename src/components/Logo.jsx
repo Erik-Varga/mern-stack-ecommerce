@@ -6,8 +6,8 @@ const Logo = () => {
   return (
     <NavLink to="/">
       <div className='lexend text-2xl font-bold py-1 flex items-center'>
-        Spubba
-        <SiShopee className='ml-1' />
+        Brinklow
+        <SiShopee className='ml-0' />
       </div>
     </NavLink>
   )

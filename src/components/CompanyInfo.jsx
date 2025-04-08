@@ -1,8 +1,14 @@
 import React from 'react'
 import Logo from './Logo'
 import { Link } from 'react-router-dom'
+import { FaAngleDoubleUp } from "react-icons/fa";
 
 const CompanyInfo = () => {
+
+    const handleTopOfPage = () => {
+        window.scrollTo(0, 0)
+    }
+
     return (
         <div>
             <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 mx-2 my-10 mt-40 text-sm'>
@@ -29,6 +35,12 @@ const CompanyInfo = () => {
                     </ul>
                 </div>
 
+            </div>
+
+            <div className='p-5'>
+                <span className='flex justify-end' onClick={handleTopOfPage}>
+                    <FaAngleDoubleUp className='text-4xl p-1 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer' />
+                </span>
             </div>
 
             <div className='text-gray-300 dark:text-gray-700'>

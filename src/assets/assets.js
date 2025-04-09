@@ -731,5 +731,11 @@ export const products = [
         date: 1744148381237,
         bestseller: false
     }
+]
 
+export const companyName = [
+    {
+        id: 1,
+        name: "Brinklow"
+    }
 ]

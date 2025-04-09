@@ -7,7 +7,6 @@ import { ShopContext } from '../context/ShopContext'
 
 const PlaceOrder = () => {
   const [method, setMethod] = useState('cod');
-
   const { navigate } = useContext(ShopContext)
 
   return (
@@ -68,10 +67,6 @@ const PlaceOrder = () => {
           </div>
         </div>
       </div>
-
-
-
-
     </div>
   )
 }

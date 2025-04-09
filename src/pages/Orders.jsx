@@ -3,7 +3,8 @@ import { ShopContext } from '../context/ShopContext'
 import Title from '../components/Title'
 
 const Orders = () => {
-  const { products, currency } = useContext(ShopContext)
+  const { products, currency } = useContext(ShopContext);
+  
   return (
     <div className='flex items-center justify-center'>
       <div className="border-t pt-16">

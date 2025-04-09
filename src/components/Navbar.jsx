@@ -13,7 +13,10 @@ const Navbar = () => {
 
   return (
     <div className='mx-2 py-2 px-1 flex items-center justify-between font-medium'>
+
         <Logo />
+
+        {/* nav links */}
         <ul className="hidden sm:flex gap-2 md:gap-5 text-sm text-gray-700 dark:text-gray-300">
 
             <NavLink to='/' className='flex flex-col items-center gap-1 uppercase'>
@@ -37,37 +40,47 @@ const Navbar = () => {
             </NavLink>
         </ul>
 
-        <div className="flex items-center gap-5">
+        {/* right icons */}
+        <div className="flex items-center gap-3 md:gap-6">
             
+            {/* search */}
             <Link to='/collection'>
                 <LuSearch onClick={()=>setShowSearch(true)} className='text-2xl cursor-pointer' />
             </Link>
 
+            {/* user */}
             <div className="group relative">
-                <LuUser className='text-2xl cursor-pointer' />
+                <Link to="/login">
+                    <LuUser className='text-2xl cursor-pointer' />
+                </Link>
 
                 <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
                     <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-300 rounded-md">
-                        <p className='cursor-pointer hover:text-black'>My Profile</p>
-                        <p className='cursor-pointer hover:text-black'>Orders</p>
-                        <p className='cursor-pointer hover:text-black'>Logout</p>
+                        <p className='text-gray-500 hover:text-black cursor-pointer'>My Profile</p>
+                        <Link to='/orders'>
+                            <p className='text-gray-500 hover:text-black cursor-pointer'>Orders</p>
+                        </Link>
+                        <p className='text-gray-500 hover:text-black cursor-pointer'>Logout</p>
                     </div>
                 </div>
             </div>
 
+            {/* cart */}
             <Link to='/cart' className='relative'>
                 <LuShoppingBag className='text-2xl cursor-pointer' />
                 <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[10px]'>{getCartCount()}</p>
             </Link>
 
+            {/* theme */}
             <div className='hidden sm:block'>
                 <ToggleDarkMode />
             </div>
 
+            {/* hamburger toggle */}
             <LuMenu className='text-2xl cursor-pointer sm:hidden' onClick={()=>setVisible(true)} />
         </div>
 
-        {/* sidebar menu */}
+        {/* hamburger menu */}
         <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-gray-50 dark:bg-gray-900 transition-all mt-2 ${visible ? 'w-full' : 'w-0'}`}>
             <div className='flex flex-col text-gray-600 dark:text-gray-400'>
                 <div className="flex items-center gap-4 p-3 cursor-pointer" onClick={()=>setVisible(false)}>

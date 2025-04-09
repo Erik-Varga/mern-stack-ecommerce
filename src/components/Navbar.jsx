@@ -81,7 +81,7 @@ const Navbar = () => {
         </div>
 
         {/* hamburger menu */}
-        <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-gray-50 dark:bg-gray-900 transition-all mt-2 ${visible ? 'w-full' : 'w-0'}`}>
+        <div className={`absolute top-0 right-0 bottom-0 overflow-hidden z-100 bg-gray-50 dark:bg-gray-900 transition-all mt-2 ${visible ? 'w-full' : 'w-0'}`}>
             <div className='flex flex-col text-gray-600 dark:text-gray-400'>
                 <div className="flex items-center gap-4 p-3 cursor-pointer" onClick={()=>setVisible(false)}>
                     <img src={assets.dropdown_icon} alt="" className='h-4 rotate-180' />

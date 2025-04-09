@@ -736,6 +736,8 @@ export const products = [
 export const companyName = [
     {
         id: 1,
-        name: "Brinklow"
+        name: "Brinklow",
+        tel: "(789) 012-3456",
+        email: "admin@brinklow.com",
     }
 ]

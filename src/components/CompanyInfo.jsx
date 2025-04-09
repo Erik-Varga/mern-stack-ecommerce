@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from './Logo'
 import { Link } from 'react-router-dom'
 import { FaAngleDoubleUp } from "react-icons/fa";
+import { companyName } from '../assets/assets';
 
 const CompanyInfo = () => {
 
@@ -19,7 +20,7 @@ const CompanyInfo = () => {
                     </p>
                 </div>
                 <div>
-                    <p className='text-xl font-medium mb-5'>COMPANY</p>
+                    <p className='text-xl font-medium mb-2'>COMPANY</p>
                     <ul className="flex flex-row sm:flex-col justify-around gap-4 sm:gap-1 text-gray-600 dark:text-gray-400">
                         <Link to='/'><li>Home</li></Link>
                         <Link to='/about'><li>About Me</li></Link>
@@ -28,13 +29,12 @@ const CompanyInfo = () => {
                     </ul>
                 </div>
                 <div>
-                    <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
+                    <p className='text-xl font-medium mb-2'>GET IN TOUCH</p>
                     <ul className="flex flex-row sm:flex-col justify-around gap-4 sm:gap-1 text-gray-600 dark:text-gray-400">
-                        <li>+1-234-567-8901</li>
-                        <li>contact@spubba.com</li>
+                        <li>{companyName[0].tel}</li>
+                        <li>{companyName[0].email}</li>
                     </ul>
                 </div>
-
             </div>
 
             <div className='p-2'>

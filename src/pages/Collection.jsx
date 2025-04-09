@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import { TbArrowRightToArc } from 'react-icons/tb';
-import { BsArrowRight } from 'react-icons/bs';
+import { BsArrowRight, BsGrid } from 'react-icons/bs';
 import Title from '../components/Title';
 import ProductItem from '../components/ProductItem';
 
@@ -12,6 +12,7 @@ const Collection = () => {
   const [category, setCategory] = useState([]);
   const [subCategory, setSubCategory] = useState([]);
   const [sortType, setSortType] = useState('revelant');
+  const [numberOfColumns, setNumberofColumns] = useState(4);
 
   const toggleCategory = (e) => {
     if (category.includes(e.target.value)) {
@@ -136,8 +137,13 @@ const Collection = () => {
           </select>
         </div>
 
+        <div className='flex items-center gap-2 p-3 text-sm'>
+          <div>Number of Columns: </div>
+          <input onChange={(e)=>setNumberofColumns(e.target.value)} type="number" value={numberOfColumns} className='border border-gray-200 dark:border-gray-800 w-10 text-center py-1 bg-gray-100 dark:bg-gray-800' />
+        </div>
+
         {/* rendering products */}
-        <div className="flex flex-wrap justify-center items-center gap-4 gap-y-6">
+        <div className={`grid grid-cols-${numberOfColumns} gap-4`}>
           {filterProducts.map((item, index) => (
             <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price} />
           ))}

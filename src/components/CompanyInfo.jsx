@@ -11,7 +11,7 @@ const CompanyInfo = () => {
 
     return (
         <div>
-            <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 mx-2 my-10 mt-40 text-sm'>
+            <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-4 md:gap-14 mx-2 my-10 mt-40 text-sm'>
                 <div className="">
                     <Logo />
                     <p className="w-full md:w-2/3 text-gray-600 dark:text-gray-400">
@@ -37,9 +37,9 @@ const CompanyInfo = () => {
 
             </div>
 
-            <div className='p-5'>
+            <div className='p-2'>
                 <span className='flex justify-end' onClick={handleTopOfPage}>
-                    <FaAngleDoubleUp className='text-4xl p-1 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer' />
+                    <FaAngleDoubleUp className='text-2xl p-1 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer' />
                 </span>
             </div>
 

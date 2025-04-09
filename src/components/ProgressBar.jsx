@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProgressBar = () => {
     const current_hr = 4;
-    const current_min = 18;
+    const current_min = 34;
 
     const total_hr = 13;
     const total_min = 23;
